@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Geomanist';
+  src: url('../fonts/geomanist/geomanist-book.eot');
+  src: url('../fonts/geomanist/geomanist-book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/geomanist/geomanist-book.woff2') format('woff2'),
+    url('../fonts/geomanist/geomanist-book.woff') format('woff'),
+    url('../fonts/geomanist/geomanist-book.ttf') format('truetype'),
+    url('../fonts/geomanist/geomanist-book.svg#geomanist-book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Geomanist';
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+  color: #545e6f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f1f2f5;
+}
+
+
+.header {
+  background: #037adb;
+  padding: 20px 25px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-name {
+  margin: 0 0 0 14px;
+  line-height: 24px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.header-logo img {
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+}
