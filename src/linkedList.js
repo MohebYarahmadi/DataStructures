@@ -104,6 +104,48 @@ class LinkedList {
 		return false;
 	}
 
+	insert(index, value) {
+		if (index === 0) return this.unshift(value);
+		if (index === this.length) return this.push(value);
+		if (index < 0 || index >= this.length) return false;
+
+		const newNode = new Node(value);
+		const temp = this.get(index - 1);
+		newNode.next = temp.next;
+		temp.next = newNode;
+		this.length++;
+		return true;
+	}
+
+	remove(index) {
+		if (index === 0) return this.shift();
+		if (index === this.length - 1) return this.pop();
+		if (index < 0 || index >= this.length) return undefined;
+
+		const before = this.get(index - 1);
+		const temp = before.next;
+		before.next = temp.next;
+		temp.next = null;
+		this.length--;
+		return temp;
+	}
+
+	reverse() {
+		let temp = this.head;
+		this.head = this.tail;
+		this.tail = temp;
+		let next = temp.next;
+		let prev = null;
+
+		for (let i = 0; i < this.length; i++) {
+			next = temp.next;
+			temp.next = prev;
+			prev = temp;
+			temp = next;
+		}
+		return this;
+	}
+
 	toString() {
 		console.log(`[ Head: ${this.head.value}, Tail: ${this.tail.value}, Length: ${this.length} ]`);
 	}
@@ -119,3 +161,10 @@ console.log(myLinkedList);
 console.log(myLinkedList.get(2));
 console.log(myLinkedList.set(3, 44));
 console.log(myLinkedList.get(3));
+console.log(myLinkedList.insert(2, 45));
+console.log(myLinkedList);
+console.log(myLinkedList.remove(3));
+console.log(myLinkedList);
+myLinkedList.toString();
+myLinkedList.reverse();
+myLinkedList.toString();
