@@ -54,6 +54,30 @@ class LinkedList {
 		return temp;
 	}
 
+	// new version of pop for readablity, nothing more
+	popi() {
+		// Handle empty linked list
+		if (this.length === 0)
+			return undefined;
+
+		let temp = this.head;
+		let pre = this.head;
+
+		if (this.length === 1) {
+			this.head = null;
+			this.tail = null;
+		} else {
+			while (temp.next) {
+				pre = temp;
+				temp = temp.next;
+			}
+			this.tail = pre;
+			this.tail.next = null;
+		}
+		this.length--;
+		return temp;
+	}
+
 	unshift(value) {
 		const newNode = new Node(value);
 
@@ -147,24 +171,34 @@ class LinkedList {
 	}
 
 	toString() {
+		if (this.length === 0) {
+			return undefined;
+		}
 		console.log(`[ Head: ${this.head.value}, Tail: ${this.tail.value}, Length: ${this.length} ]`);
 	}
 }
 
+console.log('========== LinkedList.js ===============');
 const myLinkedList = new LinkedList();
-myLinkedList.push(23);
-myLinkedList.push(24);
-myLinkedList.push(25);
-myLinkedList.push(26);
-myLinkedList.push(27);
-console.log(myLinkedList);
-console.log(myLinkedList.get(2));
-console.log(myLinkedList.set(3, 44));
-console.log(myLinkedList.get(3));
-console.log(myLinkedList.insert(2, 45));
-console.log(myLinkedList);
-console.log(myLinkedList.remove(3));
-console.log(myLinkedList);
 myLinkedList.toString();
-myLinkedList.reverse();
-myLinkedList.toString();
+// myLinkedList.push(23);
+// myLinkedList.push(24);
+// myLinkedList.toString();
+// console.log(myLinkedList.popi());
+// console.log(myLinkedList.popi());
+// console.log(myLinkedList.popi());
+// myLinkedList.toString();
+// myLinkedList.push(25);
+// myLinkedList.push(26);
+// myLinkedList.push(27);
+// console.log(myLinkedList);
+// console.log(myLinkedList.get(2));
+// console.log(myLinkedList.set(3, 44));
+// console.log(myLinkedList.get(3));
+// console.log(myLinkedList.insert(2, 45));
+// console.log(myLinkedList);
+// console.log(myLinkedList.remove(3));
+// console.log(myLinkedList);
+// myLinkedList.toString();
+// myLinkedList.reverse();
+// myLinkedList.toString();

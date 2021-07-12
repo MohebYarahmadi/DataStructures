@@ -1,6 +1,7 @@
 import '../assets/css/style.css';
 
 import './linkedList';
+import './DoublyLinkedList';
 
 const app = document.getElementById('app');
 
