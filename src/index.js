@@ -3,7 +3,8 @@ import '../assets/css/style.css';
 //import './linkedList/linkedList';
 //import './doubleLinkedList/DoublyLinkedList';
 // import './stacks/stack';
-import './queue/queue';
+// import './queue/queue';
+import './tree/bst';
 
 const app = document.getElementById('app');
 

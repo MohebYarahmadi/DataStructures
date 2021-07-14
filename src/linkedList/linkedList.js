@@ -178,27 +178,4 @@ class LinkedList {
 	}
 }
 
-console.log('========== LinkedList.js ===============');
-const myLinkedList = new LinkedList();
-myLinkedList.toString();
-// myLinkedList.push(23);
-// myLinkedList.push(24);
-// myLinkedList.toString();
-// console.log(myLinkedList.popi());
-// console.log(myLinkedList.popi());
-// console.log(myLinkedList.popi());
-// myLinkedList.toString();
-// myLinkedList.push(25);
-// myLinkedList.push(26);
-// myLinkedList.push(27);
-// console.log(myLinkedList);
-// console.log(myLinkedList.get(2));
-// console.log(myLinkedList.set(3, 44));
-// console.log(myLinkedList.get(3));
-// console.log(myLinkedList.insert(2, 45));
-// console.log(myLinkedList);
-// console.log(myLinkedList.remove(3));
-// console.log(myLinkedList);
-// myLinkedList.toString();
-// myLinkedList.reverse();
-// myLinkedList.toString();
+export default { Node, LinkedList };

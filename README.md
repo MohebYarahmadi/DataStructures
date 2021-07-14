@@ -8,3 +8,7 @@
 
 # Implementing:
 ## LinkedList
+## DoublyLinkedList
+## Queue
+## Stacks
+## Tree (Binary Search Tree)

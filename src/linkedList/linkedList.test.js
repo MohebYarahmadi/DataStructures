@@ -2,5 +2,4 @@
  *
  */
 
-//const L = require('./linkedList');
-
+// import { LinkedList } from './linkedList';
