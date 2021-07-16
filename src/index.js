@@ -4,7 +4,8 @@ import '../assets/css/style.css';
 //import './doubleLinkedList/DoublyLinkedList';
 // import './stacks/stack';
 // import './queue/queue';
-import './tree/bst';
+// import './tree/bst';
+// import './hashTable/hst';
 
 const app = document.getElementById('app');
 
