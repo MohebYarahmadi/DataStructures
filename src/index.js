@@ -6,7 +6,8 @@ import '../assets/css/style.css';
 // import './queue/queue';
 // import './tree/bst';
 // import './hashTable/hst';
-import './graphs/graphs';
+// import './graphs/graphs';
+import './algorithms/QuickSort';
 
 const app = document.getElementById('app');
 
